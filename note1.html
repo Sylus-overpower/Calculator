@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            max-width: 500px;
+            font-family: 'Pangolin', cursive;
+            font-family: 'Pangolin', cursive;
+        }
+        body{
+            width: 500px;
+            height: 700px;
+            margin-top: 50px;
+            border: 1px solid grey;
+            text-align: center;
+            position: absolute;
+        }
+        h1{
+            margin-top: 20px;
+        }
+        #input{
+            margin-top: 30px;
+            
+        }
+        #container{
+            width: 500px;
+            height: 600px;
+            margin-top: 15px;
+            margin-left: 20px;
+            position: relative;
+            border-radius: 1px solid grey;
+        }
+        #container.caculator{
+            border-radius: 1px solid grey;
+        }
+        li{
+            list-style-type: none;
+            float: left;
+            background-color: whitesmoke;
+            border-radius: 50%;
+            margin: 30px;
+        }
+        #btnA{
+            width: 50px;
+            border-radius: 40%;
+            margin-left: 30px;
+        }
+        button{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        button#btnCl{
+            border-radius: 20px;
+            width: 250px;
+        }
+        button#btnDl{
+            border-radius: 20px;
+            width: 80px;
+            margin-left: 0px;
+        }
+        button#btn0{
+            border-radius: 20px;
+            width: 160px;
+        }
+
+    </style>
+    <script>
+        // window.onload = function () {
+        //         document.getElementById("btnA").onclick = function () {
+        //             var inputValue = document.getElementById("inputA").value;
+        //             alert(eval(inputValue));
+        //         }
+        //     }
+        window.onload = function () {
+            document.getElementById("btn1").onclick = function () {
+                document.getElementById("inputValue").value += "1";
+            }
+            document.getElementById("btn2").onclick = function () {
+                document.getElementById("inputValue").value += "2";
+            }
+            document.getElementById("btn3").onclick = function () {
+                document.getElementById("inputValue").value += "3";
+            }
+            document.getElementById("btn4").onclick = function () {
+                document.getElementById("inputValue").value += "4";
+            }
+            document.getElementById("btn5").onclick = function () {
+                document.getElementById("inputValue").value += "5";
+            }
+            document.getElementById("btn6").onclick = function () {
+                document.getElementById("inputValue").value += "6";
+            }
+            document.getElementById("btn7").onclick = function () {
+                document.getElementById("inputValue").value += "7";
+            }
+            document.getElementById("btn8").onclick = function () {
+                document.getElementById("inputValue").value += "8";
+            }
+            document.getElementById("btn9").onclick = function () {
+                document.getElementById("inputValue").value += "9";
+            }
+            document.getElementById("btn0").onclick = function () {
+                document.getElementById("inputValue").value += "0";
+            }
+            document.getElementById("btnCl").onclick = function () {
+                document.getElementById("inputValue").value = "";
+            }
+            document.getElementById("btnDl").onclick = function () {
+                var text = document.getElementById("inputValue").value;
+                var subt =  text.substring(0,text.length-1);
+                document.getElementById("inputValue").value = subt;
+            }
+            document.getElementById("btnPl").onclick = function () {
+                document.getElementById("inputValue").value += "+";
+            }
+            document.getElementById("btnMi").onclick = function () {
+                document.getElementById("inputValue").value += "-";
+            }
+            document.getElementById("btnDi").onclick = function () {
+                document.getElementById("inputValue").value += "/";
+            }
+            document.getElementById("btnGo").onclick = function () {
+                document.getElementById("inputValue").value += "*";
+            }
+            document.getElementById("btnDot").onclick = function () {
+                document.getElementById("inputValue").value += ".";
+            }
+            document.getElementById("btnA").onclick = function () {
+                var result =  document.getElementById("inputValue").value;
+                document.getElementById("inputValue").value = eval(result);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>CaLcUlAtOr</h1>
+    <div id="input">
+        <input type="text" value="" style = "text-align:right; font-size: 22px;" id="inputValue">
+        <button id="btnA">확인</button>
+    </div>
+    <div id="container">
+        <div class="calculator">
+            <ul id="box">
+                <li><button id="btnCl">Clear</button></li>
+                <li><button id="btnDl">Delete</button></li>
+                <li><button id="btn1">1</button></li>
+                <li><button id="btn2">2</button></li>
+                <li><button id="btn3">3</button></li>
+                <li><button id="btnPl">+</button></li>
+                <li><button id="btn4">4</button></li>
+                <li><button id="btn5">5</button></li>
+                <li><button id="btn6">6</button></li>
+                <li><button id="btnMi">-</button></li>
+                <li><button id="btn7">7</button></li>
+                <li><button id="btn8">8</button></li>
+                <li><button id="btn9">9</button></li>
+                <li><button id="btnGo">*</button></li>
+                <li><button id="btn0">0</button></li>
+                <li><button id="btnDot">.</button></li>
+                <li><button id="btnDi">/</button></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
